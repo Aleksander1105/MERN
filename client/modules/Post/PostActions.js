@@ -76,13 +76,6 @@ export function deletePost(cuid) {
   };
 }
 
-export function deletePost(cuid) {
-  return {
-    type: DELETE_POST,
-    cuid,
-  };
-}
-
 export function thumbUp(cuid) {
   return {
     type: THUMB_UP,

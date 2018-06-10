@@ -27,12 +27,12 @@ const PostReducer = (state = initialState, action) => {
 
     case THUMB_UP :
       return {
-        data:state.data
+        data:state.data.filter(post => { return post.cuid === action.cuid ? Object.assign({}, post, action.post) : post}),
       };
 
     case THUMB_DOWN :
       return {
-        data:state.data
+        data:state.data.filter(post => { return post.cuid === action.cuid ? Object.assign({}, post, action.post) : post}),
       };
 
     default:
